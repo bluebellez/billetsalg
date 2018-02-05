@@ -9,7 +9,6 @@ body{
   margin: 0;
 }
 
-
 /*Header*/
 header{
   height: auto;
@@ -89,6 +88,30 @@ li a {
   color: rgb(118, 147,55);
 }
 
+
+/*Footer Mobil*/
+footer{
+  background-color: #F0F0F0;
+  border-top: 5px solid #4A708B;
+  margin-top: 150px;
+}
+
+.footerMobil{
+  display: flex;
+  justify-content: space-around;
+}
+
+.desktopFooter{
+  display: none;
+}
+
+.social{
+  width: 15%;
+  position: relative;
+  left: 65%;
+}
+
+
 /*Media Query Desktop*/
 @supports (grid-area: auto) {
   @media screen and (min-width: 600px) {
@@ -131,6 +154,25 @@ li a {
       width: 18%;
     }
 
+    /*Footer*/
+    .mobilFooter{
+      display: none;
+    }
+
+    .desktopFooter{
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .socialLinks{
+      width: 10%;
+    }
+
+    .social{
+      width: 48%;
+    }
+
+    /*Grid Areas*/
     header{
       grid-area: header;
       width: 100%;
@@ -142,3 +184,22 @@ li a {
 
   }
 }
+
+
+
+/*Media Query Desktop*/
+@supports (grid-area: auto) {
+  @media screen and (min-width: 600px) {
+    #profile {
+      display: grid;
+      grid-template-columns: 10% 40% 40% 10%;
+      grid-template-areas: "header header header header" ". Sec1 Sec1 ." ". Sec2 Sec3 ." "footer footer footer footer";
+
+      .profil{
+        margin-bottom: 1%;
+      }
+
+    }
+  }
+}
+

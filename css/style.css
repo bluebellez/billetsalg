@@ -72,6 +72,24 @@ li a {
 .current a {
   color: #769337; }
 
+/*Footer Mobil*/
+footer {
+  background-color: #F0F0F0;
+  border-top: 5px solid #4A708B;
+  margin-top: 150px; }
+
+.footerMobil {
+  display: flex;
+  justify-content: space-around; }
+
+.desktopFooter {
+  display: none; }
+
+.social {
+  width: 15%;
+  position: relative;
+  left: 65%; }
+
 /*Media Query Desktop*/
 @supports (grid-area: auto) {
   @media screen and (min-width: 600px) {
@@ -103,11 +121,35 @@ li a {
     .logo {
       width: 18%; }
 
+    /*Footer*/
+    .mobilFooter {
+      display: none; }
+
+    .desktopFooter {
+      display: flex;
+      justify-content: space-around; }
+
+    .socialLinks {
+      width: 10%; }
+
+    .social {
+      width: 48%; }
+
+    /*Grid Areas*/
     header {
       grid-area: header;
       width: 100%; }
 
     footer {
       grid-area: footer; } } }
+/*Media Query Desktop*/
+@supports (grid-area: auto) {
+  @media screen and (min-width: 600px) {
+    #profile {
+      display: grid;
+      grid-template-columns: 10% 40% 40% 10%;
+      grid-template-areas: "header header header header" ". Sec1 Sec1 ." ". Sec2 Sec3 ." "footer footer footer footer"; }
+      #profile .profil {
+        margin-bottom: 1%; } } }
 
 /*# sourceMappingURL=style.css.map */
